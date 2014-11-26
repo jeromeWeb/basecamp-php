@@ -375,6 +375,19 @@ return array(
             'httpMethod' => 'GET',
             'uri'       => 'people.json',
             'summary'   => 'Get all People' . PHP_EOL . '[Basecamp API: People](https://github.com/basecamp/bcx-api/blob/master/sections/people.md)'
-        )
+        ),
+        'getTodosRemaining' => array(
+            'httpMethod' => 'GET',
+            'uri' => 'projects/{projectId}/todos/remaining.json',
+            'summary'   => 'Get all remaining/active todos for a project' . PHP_EOL . '[Basecamp API: Attachments](https://github.com/basecamp/bcx-api/blob/master/sections/todos.md#get-todos)',
+            'parameters' => array(
+                'projectId' => array(
+                    'location' => 'uri',
+                    'description' => 'Project id',
+                    'type' => 'integer',
+                    'required' => true,
+                )
+            )
+        )        
     )
 );
